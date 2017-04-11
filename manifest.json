@@ -1,0 +1,25 @@
+{
+  "manifest_version": 2,
+  "name": "性能监测器",
+  "version": "1.0.0",
+  "description": "",
+  "icons": {
+    "16": "image/monitor16.png",
+    "48": "image/monitor48.png",
+    "64": "image/monitor64.png"
+  },
+  "app": {
+    "background": {
+      "scripts": [
+        "script/background.js"
+      ]
+    }
+  },
+  "permissions": [
+    "system.cpu",
+    "system.memory"
+  ]
+}
+
+
+

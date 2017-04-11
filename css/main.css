@@ -1,0 +1,43 @@
+html{
+    height: 100%;
+}
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    border: 1px solid #EEE;
+}
+
+
+#titlebar {
+    -webkit-app-region:drag;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 10px;
+    background: #EEE;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+#titlebar i {
+    -webkit-app-region:no-drag; /*如果不去掉,默认一直会触发drag,而内部的hover属性不会触发*/
+    float: right;
+    width:22px;
+    height: 22px;
+    opacity: .8;
+    margin-left: 5px;
+    margin-top: 4px;
+    display: inline-block;
+    cursor: pointer;
+    background: grey;
+    color: white;
+    border-radius: 4px;
+    text-align: center;
+    line-height: 22px;
+}
+
+#titlebar i:hover {
+    opacity: 1;
+}
+
+
