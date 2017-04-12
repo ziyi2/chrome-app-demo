@@ -122,14 +122,14 @@ function updateCpuInfo(DoughnutChart,LineChart) {
 
 
             //更新柱状图数据集
-            LineChart.data.datasets[0].data.shift();    //移除前一个数据
-            LineChart.data.datasets[0].data.push(total.toFixed(2));
+            LineChart.data.datasets[2].data.shift();    //移除前一个数据
+            LineChart.data.datasets[2].data.push(total.toFixed(2));
 
             LineChart.data.datasets[1].data.shift();    //移除前一个数据
             LineChart.data.datasets[1].data.push(parseFloat(user));
 
-            LineChart.data.datasets[2].data.shift();    //移除前一个数据
-            LineChart.data.datasets[2].data.push(parseFloat(kernel));
+            LineChart.data.datasets[0].data.shift();    //移除前一个数据
+            LineChart.data.datasets[0].data.push(parseFloat(kernel));
 
             //for(var i= 0,len=LineChart.data.datasets[1].data.length - 1; i<len; i++) {
             //    LineChart.data.datasets[0].data[i] = LineChart.data.datasets[0].data[i+1];
@@ -280,18 +280,19 @@ function drawLineCharts(canvasId,chartType) {
             labels: label,
             datasets: [
                 {
-                    label: "Total",
+                    label: "Kernel",
                     //fillColor: "rgba(220,220,220,0.2)",
                     //strokeColor: "rgba(220,220,220,1)",
                     //pointColor: "rgba(220,220,220,1)",
                     //pointStrokeColor: "#fff",
-                    data: data,
+                    data: data2,
                     //steppedLine: true
                     //spanGaps:true
                     //lineTension:5
                     //lineTension: 0.1
-                    backgroundColor:"rgba(255,99,132,0.2)"
+                    backgroundColor:"rgba(205,198,115,0.2)"
                 },
+
                 {
                     label: "User",
                     //fillColor: "rgba(220,220,220,0.2)",
@@ -306,18 +307,19 @@ function drawLineCharts(canvasId,chartType) {
                     backgroundColor:"rgba(118,238,198,0.2)"
                 },
                 {
-                    label: "Kernel",
+                    label: "Total",
                     //fillColor: "rgba(220,220,220,0.2)",
                     //strokeColor: "rgba(220,220,220,1)",
                     //pointColor: "rgba(220,220,220,1)",
                     //pointStrokeColor: "#fff",
-                    data: data2,
+                    data: data,
                     //steppedLine: true
                     //spanGaps:true
                     //lineTension:5
                     //lineTension: 0.1
-                    backgroundColor:"rgba(205,198,115,0.2)"
+                    backgroundColor:"rgba(255,99,132,0.2)"
                 }
+
 
             ]
         };
