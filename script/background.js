@@ -15,7 +15,6 @@ chrome.app.runtime.onLaunched.addListener(function() {
         resizable: false,           //不希望用户调整窗口尺寸
         frame: 'none'              //新建的窗口不显示标题栏
         //alwaysOnTop: true           //弹出窗口总是在最前面
-
     })
 });
 
