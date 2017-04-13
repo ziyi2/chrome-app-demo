@@ -9,8 +9,10 @@ chrome.app.runtime.onLaunched.addListener(function() {
     chrome.app.window.create('main.html', {
         id: 'main',                 //窗口id
         innerBounds: {              //窗口内嵌入页面的显示尺寸(不包括标题栏等)
-            width: 800,
-            height: 600
+            width: 1000,
+            height: 550,
+            minWidth: 750,
+            minHeight:520
         },
         resizable: false,           //不希望用户调整窗口尺寸
         frame: 'none'              //新建的窗口不显示标题栏
